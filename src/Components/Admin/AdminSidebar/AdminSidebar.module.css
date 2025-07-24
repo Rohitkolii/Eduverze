@@ -1,0 +1,45 @@
+.adminarea{
+    width: 95%;
+    margin: 30px auto;
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar{
+    box-shadow: 1px 1px 5px var(--sd);
+    min-width: 250px;
+    /* height: 100vh; */
+    border-radius: 6px;
+}
+
+.innersidebar{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a{
+    color: var(--black);
+    text-decoration: none;
+    padding: 12px 15px;
+    transition: 0.1s;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sidebar a:hover{
+    background-color: var(--main);
+    color: var(--whites);
+}
+.sidebar a svg{
+    color: var(--black);
+}
+
+.admincontent{
+ box-shadow: 1px 1px 5px var(--sd);
+    border-radius: 12px;   
+    padding: 20px;
+    width: 100%;
+}

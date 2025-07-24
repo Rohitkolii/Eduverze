@@ -1,0 +1,139 @@
+.Courseinfoinner{
+    width: 80%;
+    max-width: 1800px;
+    margin: auto;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    gap: 100px;
+    padding: 50px 0;
+}
+
+.courseby img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid var(--black);
+}
+
+.Courseinfocol1 h1{
+    font-size: 35px;
+    color: var(--black);
+}
+.courseby{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    line-height: 20px;
+}
+
+
+
+.courseby svg{
+    color: gold;
+    font-size: 13px;
+}
+
+.couseinfoCard{
+    box-shadow: 1px 1px 5px var(--sd);
+    padding: 20px;
+    border-radius: 6px;
+    height: fit-content;
+}
+
+.couseinfoCard button{
+    background-color: var(--main);
+    width: 100%;
+    border: transparent;
+    color: white;
+    font-weight: 500;
+    padding: 15px 0;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.couseinfoCard ul{
+    color: var(--grey);
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.exdetail{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-top: 10px;
+}
+
+.couseinfoCard .price{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--black);
+    margin: 10px 0;
+}
+
+.couseinfoCard .price del{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.duration{
+    display: flex;
+    gap: 5px;
+    border: 1px solid var(--sd);
+    padding: 3px 10px;
+    border-radius: 6px;
+    /* box-shadow: 1px 1px 5px var(--sd); */
+}
+
+.duration svg{
+    font-size: 22px;
+}
+
+.thumbimg{
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 1px 5px 5px var(--sd);
+    border-radius: 6px;
+}
+
+.coursedesc p{
+    margin-bottom: 10px;
+    color: var(--black);
+}
+
+.coursedesc ul{
+    color: var(--grey);
+    margin-left: 30px;
+}
+
+
+@media(max-width:1200px){
+    .Courseinfoinner{
+        width: 95%;
+        gap: 20px;
+        grid-template-columns: 60% 1fr;
+    }
+}
+@media(max-width:1000px){
+    .Courseinfoinner{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px 0;
+    }
+}
+
+@media(max-width:600px){
+    .Courseinfocol1 h1{
+    font-size: 25px;
+    color: var(--black);
+}
+
+.courseby img{
+    width: 35px;
+    height: 35px;
+}
+}

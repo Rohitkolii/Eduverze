@@ -1,0 +1,51 @@
+.CourseCard{
+    /* border: 1px solid var(--whites); */
+    border-radius: 12px;
+    border: 1px solid var(--sd);
+    box-shadow: 1px 1px 5px var(--sd);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.CourseCard:hover{
+    transform: translateY(-5px);
+}
+
+.CourseCard .con1 img{
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+}
+.CourseCard .con2{
+    padding: 0px 10px;
+    padding-bottom: 5px;
+}
+
+.CourseCard .con2 p:nth-child(1){
+    color: var(--black);
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.CourseCard .con2 p:nth-child(2), .CourseCard .con2 p:nth-child(3){
+    color: var(--grey);
+    font-size: 13px;
+}
+
+.CourseCard .con2 a{
+    color: var(--main);
+    text-decoration: none;
+}
+
+.price{
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.price del{
+    color: var(--grey);
+    font-weight: 500;
+    font-size: 15px;
+}

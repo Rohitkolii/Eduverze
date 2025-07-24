@@ -1,0 +1,32 @@
+.usercourses .row1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.usercourses .row1 .btns{
+    height: 40px;
+}
+
+.usercourses .row1 .btns input{
+    height: 100%;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid var(--sd);
+}
+
+.usercourses .row1 .btns button{
+    background-color: var(--main);
+    border: none;
+    height: 100%;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+}
+.usercourses .row2{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}

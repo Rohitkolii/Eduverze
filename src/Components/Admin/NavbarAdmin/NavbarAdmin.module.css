@@ -1,0 +1,36 @@
+.NavbarAdmin{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+    background-color: var(--whites);
+    /* color: var(--whites); */
+    box-shadow: 1px 1px 5px var(--sd);
+}
+
+.NavbarAdmin img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 1px solid var(--black);
+    background-color: var(--main);
+}
+
+.NavbarAdmin .userprofile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.NavbarAdmin .userprofile p:nth-child(1){
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.NavbarAdmin h1{
+    color: var(--main);
+    font-size: 22px;
+}

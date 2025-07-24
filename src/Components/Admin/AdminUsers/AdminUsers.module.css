@@ -1,0 +1,42 @@
+.tablerow{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--sd);
+    padding: 10px;
+    text-align: center;
+}
+.table .userprofile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.table .userprofile div{
+    line-height: 20px;
+}
+.table .userprofile div p:nth-child(2){
+    font-size: 12px;
+}
+.table .userprofile img{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid var(--black);
+}
+.userbtn button{
+    border: transparent;
+    margin-right: 5px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.userbtn button:nth-child(1){
+    background-color: red;
+    color: white;
+}
+.userbtn button:nth-child(2){
+    background-color: rgb(240, 240, 0);
+}

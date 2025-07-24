@@ -1,0 +1,82 @@
+.Guidanceinner{
+    border: 1px solid var(--sd);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 20px;
+    border-radius: 6px;
+}
+
+.Guidanceinner form, .response{
+    border: 1px solid var(--sd);
+    padding: 20px;
+    display: grid;
+    border-radius: 12px;
+    font-size: 15px;
+    height: fit-content;
+    
+}
+
+.Guidanceinner form input{
+    height: 35px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid var(--sd);
+}
+
+.Guidanceinner form select{
+    margin-bottom: 5px;
+    height: 35px;
+    border: 1px solid var(--sd);
+}
+
+.Guidanceinner form input:focus, .Guidanceinner form section:focus{
+    outline: transparent;
+    border: 1px solid var(--main);
+}
+
+.Guidanceinner button{
+    background-color: var(--main);
+    border: transparent;
+    height: 40px;
+    color: var(--whites);
+    font-weight: 500;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.Guidanceinner .row{
+    display: flex;
+    flex-direction: column;
+}
+
+.responseinner p:nth-child(1){
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--main);
+}
+.responseinner p:nth-child(2){
+    color: var(--grey);
+}
+
+.responseinner ul{
+    padding-left: 20px;
+    margin: 5px 0;
+}
+
+.response{
+    border-top: 5px solid var(--main);
+}
+
+
+
+@media(max-width:1200px){
+    .Guidanceinner{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width:600px){
+    .Guidanceinner{
+    border: none;
+    padding: 0px;
+}
+}

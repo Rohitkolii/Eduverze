@@ -1,0 +1,74 @@
+.Testimonialsinner{
+    padding: 50px 0;
+}
+
+.Testimonialsgrid{
+    width: 80%;
+    max-width: 1800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px 0;
+    /* margin-bottom: 50px; */
+}
+
+.Testimonialsprofile img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    object-position: top;
+    /* border: 1px solid var(--grey); */
+    border-radius: 50%;
+    background-color: var(--main);
+}
+
+.Testimonialsprofile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.Testimonialsprofile p:nth-child(1){
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+
+.Testimonialsgrid .rating{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+    .Testimonialsgrid .rating svg{
+    color: gold;
+}
+
+.TestimonialsCard{
+    border: 1px solid rgba(128, 128, 128, 0.311);
+    box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.311);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.TestimonialsCard .review{
+    font-size: 13px;
+    padding: 10px 0;
+    font-weight: 400;
+}
+
+
+@media(max-width:1200px){
+    .Testimonialsgrid{
+    width: 95%;
+}   
+}
+
+@media(max-width:800px){
+    .Testimonialsgrid{
+    grid-template-columns: repeat(1, 1fr);
+}   
+}

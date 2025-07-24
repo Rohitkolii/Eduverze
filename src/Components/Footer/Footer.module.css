@@ -1,0 +1,133 @@
+.footer{
+    background-color: var(--whites);
+    padding-top: 50px;
+}
+
+.innerfooter{
+    width: 80%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.footer1{
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: 35% repeat(3, 1fr);
+    gap: 50px;
+    padding: 30px 0;
+}
+
+.footer1 h1{
+    color: var(--main);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer1 h1 svg{
+    color: var(--black);
+}
+
+.footer1 p{
+    color: var(--grey);
+}
+
+.footer1 ul li, .innerfooter a{
+    text-decoration: none;
+    color: var(--black);
+    list-style-type: none;
+    font-weight: 400;
+    transition: .3s;
+}
+.innerfooter a:hover{
+    color: var(--main);
+}
+
+.socialicon{
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.socialicon div{
+    padding: 6px;
+    border-radius: 50%;
+    background-color: var(--smoke);
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+}
+
+.socialicon svg{
+    font-size: 16px;
+    color: var(--black);
+    transition: .3s;
+}
+
+
+.socialicon div:hover svg{
+    color: var(--main);
+}
+
+.footer2{
+    text-align: center;
+    border-top: 1px dotted var(--grey);
+    padding: 20px 0;
+}
+
+
+@media(max-width:1200px){
+    .innerfooter{
+    width: 95%;
+}
+}
+
+@media(max-width:1000px){
+    .footer1{
+    grid-template-columns:repeat(2, 1fr);
+}
+.footer{
+    padding-top: 10px;
+}
+}
+@media(max-width:700px){
+    .footer1{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns:repeat(3, 1fr);
+}
+
+.f1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+}
+
+
+@media(max-width:550px){
+    .footer1{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.f1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+}
+
+@media(max-width:400px){
+    .footer1{
+    display: grid;
+    grid-template-columns:repeat(1, 1fr);
+    grid-template-rows: auto;
+}
+
+.f1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+}

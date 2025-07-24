@@ -1,0 +1,27 @@
+.certificates .row1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.certificates .row1 .btns{
+    height: 40px;
+}
+
+.certificates .row1 .btns input{
+    height: 100%;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid var(--sd);
+}
+
+.certificates .row1 .btns button{
+    background-color: var(--main);
+    border: none;
+    height: 100%;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+}

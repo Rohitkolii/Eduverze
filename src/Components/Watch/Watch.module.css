@@ -1,0 +1,80 @@
+.Watchconinner{
+    width: 100%;
+    max-width: 1800px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 65% 1fr;
+    gap: 20px;
+    
+    border-radius: 12px;
+    /* background-color: var(--black); */
+    border: 1px solid var(--sd);
+    box-shadow: 1px 1px 5px var(--sd);
+    padding: 25px;
+}
+
+.videocontainer {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 6px;
+}
+
+.videocontainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border-radius: 12px; */
+}
+
+.watchextra{
+    border: 1px solid var(--sd);
+    box-shadow: 1px 1px 5px var(--sd);
+    padding: 20px;
+    border-radius: 12px;
+    height: fit-content;
+}
+
+.watchextra p{
+    font-weight: 500;
+    border-bottom: 1px solid var(--grey);
+    padding-bottom: 10px;
+}
+
+.chapbtn{
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.chapbtn button{
+    background: transparent;
+    border: transparent;
+    border-bottom: 1px solid var(--sd);
+    /* border-radius: 6px; */
+    font-size: 15px;
+    padding: 15px;
+    text-align: left;
+    color: var(--black);
+    cursor: pointer;
+}
+.chapbtn button:hover{
+    color: var(--main);
+}
+
+@media(max-width:1200px){
+    .Watchconinner{
+        width: 95%;
+    } 
+    
+    .Watchconinner{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

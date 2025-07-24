@@ -1,0 +1,101 @@
+.navbar{
+    background-color: var(--whites);
+    box-shadow: 1px 1px 5px var(--sd);
+}
+
+.alertnote{
+    background-color: var(--black);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 80px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.alertnote a{
+    text-decoration: none;
+    color: var(--main) !important;
+}
+
+.innernav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    width: 90%;
+    margin: auto;
+    max-width: 1400px;
+}
+
+.navbar .logo h1{
+    color: var(--main);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: capitalize;
+    font-size: 22px;
+}
+
+.navbar .logo h1 svg{
+    color: var(--black);
+    font-size: 30px;
+}
+
+.navbar .navlist ul{
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.navbar a:hover{
+    transition: .3s;
+    color: var(--main);
+}
+
+.navbar .navlist ul{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.navbar button{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: transparent;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.navbar .navlist .btn2{
+    background-color: var(--main);
+    color: var(--whites);
+}
+
+.navbar .navlist .btn1{
+    border: 1px solid var(--main);
+    color: var(--main);
+}
+
+@media(max-width:1000px){
+    .navlist{
+        display: none;
+    }
+
+    .alertnote{
+    background-color: var(--black);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+}
