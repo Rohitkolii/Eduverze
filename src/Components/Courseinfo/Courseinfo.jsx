@@ -1,19 +1,52 @@
+import { useEffect } from "react";
 import Styles from "./Courseinfo.module.css"
 import { FaStar } from "react-icons/fa";
 import { IoIosTimer } from "react-icons/io";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSingleCourse } from "../../Store/SingleCourseSlice";
+import { useParams } from "react-router-dom";
 
 const Courseinfo = () => {
+    const {id} = useParams()
+    const dispatch = useDispatch()
+    const CurrentCourseData = useSelector(store=> store.coursedetailreducer.courseDetail.data)
+    console.log(CurrentCourseData);
+    
+    // console.log(id);
+
+    const PurchaseCourse = async (id) => {
+        // console.log(id);
+        try {
+            const response = await fetch(`http://localhost:3001/api/orders/addneworder/${id}`,{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.getItem("access_toekn")}`
+            },
+            // data: JSON.stringify("Hello")
+        })
+        console.log(response);
+        
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }
+    
+    useEffect(()=> {
+        dispatch(fetchSingleCourse(id))
+    },[])
   return (
     <section className={Styles.Courseinfo}>
         <div className={Styles.Courseinfoinner}>
             <div className={Styles.Courseinfocol1}>
-                <h1>Advanced Python Programming</h1>
-                <p>This course is designed for those who have a basic understanding of Python and want to take their skills to the next level. You will explore advanced topic</p>
+                <h1>{CurrentCourseData?.course_name || ""}</h1>
+                <p></p>
                 <div className={Styles.exdetail}>
                     <div className={Styles.courseby}>
-                        <img src="images/user.png" alt="" />
+                        <img src="/images/user.png" alt="" />
                         <div>
-                            <p>By Rohit koli</p>
+                            <p>By {CurrentCourseData?.course_publisher}</p>
                             <div>
                                 <FaStar />
                                 <FaStar />
@@ -26,36 +59,44 @@ const Courseinfo = () => {
 
                     <div className={Styles.duration}>
                         <IoIosTimer />
-                        <p>25 Minutes</p>
+                        <p>{CurrentCourseData?.course_duration}</p>
                     </div>
                 </div>
 
-                <img className={Styles.thumbimg} src="images/7.png" alt="" />
+                <img className={Styles.thumbimg} src={`http://localhost:3001/${CurrentCourseData?.course_thumbnail}` || ""} alt="" />
 
                 <div className={Styles.coursedesc}>
                     <h3>Course Description</h3>
-                    <p>This course is designed for those who have a basic understanding of Python and want to take their skills to the next level. You will explore advanced topics such as decorators, generators, and context managers.</p>
-                    <p>By the end of this course, you will be able to write efficient and clean Python code, and understand how to leverage Python's powerful features for real-world applications.</p>
-                    <ul>
-                        <li>Master advanced data structures</li>
-                        <li>Implement object-oriented programming concepts</li>
-                        <li>Work with libraries and frameworks</li>
-                    </ul>
+                    <p>{CurrentCourseData?.course_description || ""}</p>
                 </div>
             </div>
 
             <div className={Styles.couseinfoCard}>
                 <div>
                     <h3>What's in the course?</h3>
+                    {CurrentCourseData?.course_points ?
                     <ul>
-                        <li>Lifetime access with free updates.</li>
+                        {CurrentCourseData?.course_points?.map((point,i)=> <li key={i}>{point}</li>)}
+                    </ul>:""
+                    }
+
+                    {
+                        CurrentCourseData?.course_points.length === 0 ?
+                        <ul>
+                            <li>Lifetime access with free updates.</li>
                         <li>Step-by-step, hands-on project guidance.</li>
                         <li>Downloadable resources and source code.</li>
                         <li>Quizzes to test your knowledge.</li>
                         <li>Certificate of completion.</li>
-                    </ul>
-                    <p className={Styles.price}>₹67.99 <del> ₹79.99</del></p>
-                    <button>Enroll Now</button>
+                        </ul>
+                        :""
+                    }
+
+
+
+                    
+                    <p className={Styles.price}>{CurrentCourseData?.course_price || ""} <del> ₹79.99</del></p>
+                    <button onClick={()=> PurchaseCourse(CurrentCourseData._id)}>Enroll Now</button>
                 </div>
             </div>
         </div>

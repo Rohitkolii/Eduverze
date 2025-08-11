@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import CourseCard from '../../CourseCard/CourseCard'
-import Styles from "./AdminCourses.module.css"
+import Styles from "./AdminQuizes.module.css"
 import {useFormik} from "formik"
 import {courseSchema} from "../../../Schemas/courseSchema"
 import { FaImage } from "react-icons/fa";
@@ -18,7 +17,7 @@ let initialValues = {
     course_discount: ""
 }
 
-const AdminCourses = () => {
+const AdminQuizes= () => {
      const dispatch = useDispatch();
   useEffect(()=>{
     dispatch(fetchCourses())
@@ -49,7 +48,7 @@ const AdminCourses = () => {
     const {values, errors, touched,handleSubmit, handleChange, handleBlur, setFieldValue} = useFormik({
         initialValues: initialValues,
         validationSchema: courseSchema,
-        onSubmit: async (value, action)=> {
+        onSubmit: async (value)=> {
             console.log(value);
             const formData = new FormData()
             formData.append("course_name",value.course_name)
@@ -60,20 +59,15 @@ const AdminCourses = () => {
             formData.append("course_publisher",value.course_publisher)
             formData.append("course_duration",value.course_duration)
             formData.append("course_discount",value.course_discount)
-            // formData.append("course_points",coursepointsarr)
-            coursepointsarr.forEach((p, index) => {
-                formData.append(`course_points[${index}]`, p);
-                });
-            // for (let pair of formData.entries()) {
-            //     console.log(`${pair[0]}:`, pair[1]);
-            //     }
+            formData.append("course_points",coursepointsarr)
+            for (let pair of formData.entries()) {
+                console.log(`${pair[0]}:`, pair[1]);
+                }
             try {
                 const response = await fetch("http://localhost:3001/api/courses/addcourse", {
                     method: "POST",
                     body: formData
                 })
-                action.resetForm()
-                setcoursepointsarr([])
             } catch (error) {
                 
             }
@@ -85,7 +79,7 @@ const AdminCourses = () => {
   return (
     <section className={Styles.admincourses}>
         <div className={Styles.addMorebtn}>
-            <p className="head">Admin / Courses</p>
+            <p className="head">Admin / Quizes</p>
             {formVisible?
             <button onClick={()=> setFormVisible(false)}>Hide Form</button>
             :
@@ -162,15 +156,8 @@ const AdminCourses = () => {
                 
         </form>
         }
-        <div className={Styles.courses}>
-            <div className={Styles.coursegrid}>
-                {
-                    courses?.map((elm,index)=> <CourseCard key={index} courseData={elm}/>)
-                }
-            </div>
-        </div>
     </section>
   )
 }
 
-export default AdminCourses
+export default AdminQuizes

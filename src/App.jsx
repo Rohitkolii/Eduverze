@@ -14,6 +14,7 @@ import CareerGuidance from './Pages/CareerGuidance'
 import AdminDashboard from './Pages/admin/AdminDashboard'
 import Managecourses from './Pages/admin/Managecourses'
 import ManageUsers from './Pages/admin/ManageUsers'
+import ManageQuizes from './Pages/admin/ManageQuizes'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/courses" element={<Course />}/>
-          <Route path="/123" element={<CourseDetails />}/>
+          <Route path="/courses/:id" element={<CourseDetails />}/>
 
           <Route path="/user/courses/learn" element={<LearnCourse />}/>
           <Route path="/user" element={<UserProfile />}/>
@@ -37,6 +38,7 @@ function App() {
           <Route path="/admin" element={<AdminDashboard />}/>
           <Route path="/admin/managecourses" element={<Managecourses />}/>
           <Route path="/admin/manageusers" element={<ManageUsers />}/>
+          <Route path="/admin/managequizes" element={<ManageQuizes />}/>
 
         </Routes>
       </BrowserRouter>

@@ -19,12 +19,16 @@ const AdminSidebar = ({children}) => {
                     <Link to="/admin"><MdDashboard />Dashboard</Link>
                     <Link to="/admin/managecourses"><MdMenuBook />Manage Courses</Link>
                     <Link to="/admin/manageusers"><FaUserFriends />Manage Users</Link>
-                    <Link to="/"><MdQuiz />Manage Quizes</Link>
+                    <Link to="/admin/managequizes"><MdQuiz />Manage Quizes</Link>
                     <Link to="/"><PiCertificateDuotone />Certificates</Link>
                     <Link to="/"><IoSettings />Settings</Link>
                 </div>
             </div>
-            <div className={Styles.admincontent}>{children}</div>
+            <div className={Styles.admincontent}>
+              <div className={Styles.admincontentinner}>
+                {children}
+              </div>
+            </div>
         </section>
     </>
   )

@@ -5,6 +5,7 @@
     box-shadow: 1px 1px 5px var(--sd);
     cursor: pointer;
     transition: .5s;
+    text-decoration: none;
 }
 
 .CourseCard:hover{

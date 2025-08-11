@@ -1,0 +1,21 @@
+.addMorebtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* .addMorebtn p{
+    font-size: 20px;
+    font-weight: 500;
+} */
+.addMorebtn button, .colin button{
+    color: var(--whites);
+    background-color: var(--main);
+    border: transparent;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    /* width: fit-content; */
+}

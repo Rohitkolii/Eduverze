@@ -10,10 +10,10 @@
     margin-bottom: 10px;
 }
 
-.addMorebtn p{
+/* .addMorebtn p{
     font-size: 20px;
     font-weight: 500;
-}
+} */
 .addMorebtn button, .colin button{
     color: var(--whites);
     background-color: var(--main);
@@ -93,4 +93,24 @@
 .errtext{
     color: red;
     font-size: 10px;
+}
+
+.chips{
+    display: flex;
+    justify-content: space-between;
+    border: 2px dotted gray;
+    background-color:whitesmoke;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.chips button{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 0;
 }
