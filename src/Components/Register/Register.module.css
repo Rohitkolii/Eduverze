@@ -69,9 +69,10 @@
     margin: 15px 0;
 }
 
-.regmsg a{
+.regmsg span{
     color: var(--main);
     text-decoration: none;
+    cursor: pointer;
 }
 
 .closebtn{
@@ -80,4 +81,12 @@
     top: 10px;
     font-size: 30px;
     color: var(--black);
+}
+
+.errtext{
+    color: red;
+    font-size: 10px;
+    margin-top: 2px;
+    padding: 0px;
+    font-weight: 400;
 }

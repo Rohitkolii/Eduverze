@@ -40,3 +40,20 @@
 .userbtn button:nth-child(2){
     background-color: rgb(240, 240, 0);
 }
+
+.filterinner{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* justify-content: space-between; */
+}
+
+.filterinner .filtercol{
+    height: 40px;
+}
+
+
+.filterinner .filtercol input, .filterinner .filtercol button{
+    height: 100%;
+    padding: 10px 5px;
+}

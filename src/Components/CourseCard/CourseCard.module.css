@@ -15,6 +15,8 @@
 .CourseCard .con1 img{
     width: 100%;
     border-radius: 12px 12px 0 0;
+    height: 180px;
+    object-fit: cover;
 }
 .CourseCard .con2{
     padding: 0px 10px;
@@ -40,13 +42,13 @@
 
 .price{
     color: var(--black);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     margin-top: 10px;
 }
 
 .price del{
     color: var(--grey);
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 12px;
 }

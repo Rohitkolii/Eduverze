@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 1800px;
     margin: auto;
-    padding: 20px;
+    /* padding: 20px; */
     display: grid;
     grid-template-columns: 65% 1fr;
     gap: 20px;
@@ -10,8 +10,9 @@
     border-radius: 12px;
     /* background-color: var(--black); */
     border: 1px solid var(--sd);
-    box-shadow: 1px 1px 5px var(--sd);
-    padding: 25px;
+    box-shadow: 1px 1px 5px white;
+    padding: 15px;
+    margin-top: 10px;
 }
 
 .videocontainer {
@@ -66,7 +67,9 @@
     cursor: pointer;
 }
 .chapbtn button:hover{
-    color: var(--main);
+    /* color: var(--main); */
+    background-color: rgb(236, 236, 236);
+    opacity: 1;
 }
 
 @media(max-width:1200px){

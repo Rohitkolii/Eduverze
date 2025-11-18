@@ -16,6 +16,7 @@ import Managecourses from './Pages/admin/Managecourses'
 import ManageUsers from './Pages/admin/ManageUsers'
 import ManageQuizes from './Pages/admin/ManageQuizes'
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -27,7 +28,7 @@ function App() {
           <Route path="/courses" element={<Course />}/>
           <Route path="/courses/:id" element={<CourseDetails />}/>
 
-          <Route path="/user/courses/learn" element={<LearnCourse />}/>
+          <Route path="/user/courses/:id" element={<LearnCourse />}/>
           <Route path="/user" element={<UserProfile />}/>
           <Route path="/user/courses" element={<UserCourses />}/>
           <Route path="/user/quizes" element={<Quizes />}/>

@@ -14,7 +14,7 @@ import {authSchema} from "../../Schemas/authSchema"
 import { useDispatch } from "react-redux"
 import { loginAuth } from '../../Store/AuthSlice';
 
-const Login = ({setshowlogin}) => {
+const Login = ({setshowlogin, setshowregister}) => {
 
     const dispatch = useDispatch()
 
@@ -68,7 +68,7 @@ const Login = ({setshowlogin}) => {
             </div>
             {errors.password && touched.password ? <p className={Styles.errtext}>{errors.password}</p> : null}
             <div className={Styles.regmsg}>
-                <p>Don't have account <Link to="/">Register</Link></p>
+                <p>Don't have account <span onClick={()=> {setshowregister(true) , setshowlogin(false)}}>Register</span></p>
             </div>
 
             <button type='submit'>Login</button>

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import CourseCard from '../Components/CourseCard/CourseCard'
-import Footer from '../Components/Footer/Footer'
 import Navbar from '../Components/Navbar/Navbar'
 import Sidebar from '../Components/Sidebar/Sidebar'
 import Styles from './UserProfile.module.css'
@@ -12,9 +11,20 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 
 import { PiCertificateDuotone } from "react-icons/pi";
+import { useSelector, useDispatch } from 'react-redux'
+import { useEffect } from 'react'
+import { fetchCourses } from '../Store/CourseSlice'
 
 const UserProfile = () => {
-  return (
+    const dispatch = useDispatch();
+    const courseData = useSelector(state => state.coursesreducer.courses)
+    console.log(courseData);
+
+    useEffect(()=> {
+        dispatch(fetchCourses())
+    },[])
+    
+    return (
     <section className={Styles.userPage}>
         <Navbar />
         <section className={Styles.profilecon}>
@@ -51,9 +61,9 @@ const UserProfile = () => {
                     <p className={Styles.prohead}>Your courses</p>
 
                     <div className={Styles.col1}>
-                        <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
+                        {
+                            courseData?.slice(0,4).map(((elm, index)=> <CourseCard key={index} courseData={elm} />))
+                        }
                     </div>
                 </div>
 
